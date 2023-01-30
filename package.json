@@ -1,12 +1,10 @@
 {
-  "name": "week1",
+  "name": "week2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test--functions": "jest functions",
-    "test--prototype": "jest prototype",
     "compile": "tsc"
   },
   "keywords": [],
