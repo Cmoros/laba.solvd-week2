@@ -1,8 +1,6 @@
-# String Arithmetic
+# Week 2 Homework
 
 ### Laba.Solvd Nodejs Course
-
-### Week 2 Homework
 
 ## About
 
