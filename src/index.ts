@@ -1,14 +1,15 @@
-type Sum = (num: number) => AddToSum;
+type Sum = (currentSum: number) => AddToSum;
 
 type AddToSum = {
   (anotherNum: number): ReturnType<Sum>;
-  (): Parameters<Sum>[0];
+  valueOf: () => number;
 };
 
-export const sum: Sum = (currentSum: number) => {
-  const addToSum = (anotherNum?: number) =>
-    anotherNum == null ? currentSum : sum(currentSum + anotherNum);
-  return addToSum as AddToSum;
+export const sum: Sum = (currentSum) => {
+  const addToSum = (anotherNum: number) => sum(currentSum + anotherNum);
+  addToSum.valueOf = () => currentSum;
+  addToSum.toString = () => `${currentSum}`;
+  return addToSum;
 };
 
 type Debounce = <T extends (...args: any[]) => void>(
