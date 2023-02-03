@@ -5,6 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:sum": "jest sum",
+    "test:debounce": "jest debounce",
+    "test:quicksort": "jest quickSort",
+    "test:bubblesort": "jest bubbleSort",
+    "test:comparing": "jest comparingQuickBubble",
+    "test:random": "jest comparingQuickBubble --testNamePattern=sortedRandom",
+    "test:sorted": "jest comparingQuickBubble --testNamePattern=sortedNormal",
+    "test:backward": "jest comparingQuickBubble --testNamePattern=sortedBackward",
     "compile": "tsc"
   },
   "keywords": [],
